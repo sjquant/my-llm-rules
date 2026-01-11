@@ -17,6 +17,8 @@ You must strictly follow the **"Previous Step + Alpha"** logic.
 - **Step 4:** `[Step 3]` + **Deepening** (Place, Time, State).
 - **Step 5:** `[Step 4]` + **Addtional Sentence**.
 
+**IMPORTANT:** The final sentences must sound natural to native Japanese speakers.
+
 ## 2. Formatting Rules (Strict Layout)
 
 For **EVERY SINGLE STEP**, use the exact format below.
