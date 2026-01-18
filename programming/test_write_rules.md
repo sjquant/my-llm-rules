@@ -12,7 +12,19 @@ The user will provide a set of **Business Requirements**. You must generate the 
 2.  **Define Test Scope:** Create "Meaningful Tests" only. Avoid redundant or trivial tests.
 3.  **Draft Test Cases:** Write the test code following the constraints below.
 
-## Constraints & Standards (STRICT)
+### 1. ❌ IGNORE / DO NOT TEST (The "Trivial" Zone)
+* **Language Syntax:** Do not test if the programming language works (e.g., method chaining returning `self`, simple type instantiation).
+* **Third-Party Libraries:** Do not test if standard libraries (JSON, HTTP clients, ORMs) work. Assume they work.
+* **Trivial Data Access:** Do not test simple Getters/Setters unless they contain transformation logic.
+* **Redundant Checks:** If a "Happy Path" test already verifies a result, do not create a separate test just to check a sub-property of that same result.
+
+### 2. ✅ MUST TEST (The "Value" Zone)
+* **Business Invariants:** Rules that must always be true (e.g., "Balance cannot be negative", "Username must be unique").
+* **State Transitions:** Verifying allowed and disallowed status changes (e.g., "Cannot refund a cancelled order").
+* **Boundary Analysis:** Edge cases at the limits of logic (e.g., 0, Max Int, Empty Lists, Leap Years).
+* **Error Handling:** Custom exceptions and fallback logic defined by the business requirements.
+
+## Constraints & Standards
 
 1.  **TDD Red Phase Only:**
     - All tests MUST fail initially.
